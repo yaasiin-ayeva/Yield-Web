@@ -20,47 +20,72 @@
     </calendar>
   </calendars>
   <tasks>
-    <task id="1" name="Etude pr&#xE9;visionnelle" note="" work="201600" start="20220411T000000Z" end="20220419T170000Z" work-start="20220411T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
-    <task id="2" name="Conception de mod&#xE8;le de classe" note="" work="28800" start="20220411T000000Z" end="20220411T170000Z" work-start="20220411T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
-    <task id="3" name="Conception de modele de UC" note="" work="28800" start="20220411T000000Z" end="20220411T170000Z" work-start="20220411T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
-    <task id="4" name="Mise en place de la base de donn&#xE9;es" note="" work="86400" start="20220419T000000Z" end="20220421T170000Z" work-start="20220419T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+    <task id="1" name="Etude pr&#xE9;visionnelle" note="" work="28800" duration="57600" start="20220411T000000Z" end="20220412T170000Z" work-start="20220411T080000Z" percent-complete="100" priority="0" type="normal" scheduling="fixed-duration">
+      <constraint type="must-start-on" time="20220411T000000Z"/>
+    </task>
+    <task id="2" name="Conception de mod&#xE8;le de classe" note="" work="28800" start="20220412T170000Z" end="20220413T170000Z" work-start="20220413T080000Z" percent-complete="100" priority="0" type="normal" scheduling="fixed-work">
+      <predecessors>
+        <predecessor id="1" predecessor-id="1" type="FS"/>
+      </predecessors>
+    </task>
+    <task id="3" name="Conception de modele de UC" note="" work="28800" start="20220412T170000Z" end="20220413T170000Z" work-start="20220413T080000Z" percent-complete="100" priority="0" type="normal" scheduling="fixed-work">
+      <predecessors>
+        <predecessor id="1" predecessor-id="1" type="FS"/>
+      </predecessors>
+    </task>
+    <task id="4" name="Mise en place de la base de donn&#xE9;es" note="" work="57600" start="20220413T170000Z" end="20220418T094640Z" work-start="20220414T080000Z" percent-complete="85" priority="0" type="normal" scheduling="fixed-work">
+      <predecessors>
+        <predecessor id="1" predecessor-id="3" type="FS"/>
+        <predecessor id="1" predecessor-id="2" type="FS"/>
+      </predecessors>
+    </task>
+    <task id="5" name="Impl&#xE9;mentation du mod&#xE8;le de donn&#xE9;es" note="" work="28800" start="20220418T094640Z" end="20220419T094640Z" work-start="20220418T094640Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+      <predecessors>
+        <predecessor id="1" predecessor-id="4" type="FS"/>
+      </predecessors>
+    </task>
+    <task id="6" name="Impl&#xE9;mentation des fonctionnalit&#xE9;s de traitement de donn&#xE9;es de mod&#xE8;les" note="Ajout/Modification/Suppression des donn&#xE9;es&#10;Lyc&#xE9;e&#10;Statut&#10;Contact&#10;Ville&#10;Niveau&#10;Etablissement&#10;" work="86400" start="20220419T000000Z" end="20220421T170000Z" work-start="20220419T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
       <constraint type="must-start-on" time="20220419T000000Z"/>
     </task>
-    <task id="5" name="Impl&#xE9;mentation du mod&#xE8;le de donn&#xE9;es" note="" work="57600" start="20220421T000000Z" end="20220422T170000Z" work-start="20220421T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
-      <constraint type="must-start-on" time="20220421T000000Z"/>
+    <task id="7" name="Impl&#xE9;mentation des fonctionnalit&#xE9;s de cr&#xE9;ation de messages" note="" work="144000" start="20220421T170000Z" end="20220428T170000Z" work-start="20220422T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+      <predecessors>
+        <predecessor id="1" predecessor-id="6" type="FS"/>
+      </predecessors>
     </task>
-    <task id="6" name="Impl&#xE9;mentation des fonctionnalit&#xE9;s de traitement de donn&#xE9;es de mod&#xE8;les" note="Ajout/Modification/Suppression des donn&#xE9;es&#10;Lyc&#xE9;e&#10;Statut&#10;Contact&#10;Ville&#10;Niveau&#10;Etablissement&#10;" work="201600" start="20220421T000000Z" end="20220429T170000Z" work-start="20220421T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
-      <constraint type="must-start-on" time="20220421T000000Z"/>
+    <task id="8" name="Modification et travaux au niveau du front-end" note="" work="57600" start="20220411T000000Z" end="20220412T170000Z" work-start="20220411T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
+    <task id="9" name="Mise en place du serveur d'application" note="" work="57600" start="20220411T000000Z" end="20220412T170000Z" work-start="20220411T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
+    <task id="10" name="Cr&#xE9;ation de l'UI (Design)" note="" work="86400" start="20220412T170000Z" end="20220415T170000Z" work-start="20220413T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+      <constraint type="start-no-earlier-than" time="20220412T000000Z"/>
+      <predecessors>
+        <predecessor id="1" predecessor-id="8" type="FS"/>
+      </predecessors>
     </task>
-    <task id="7" name="Impl&#xE9;mentation des fonctionnalit&#xE9;s de cr&#xE9;ation de messages" note="" work="345600" start="20220422T000000Z" end="20220509T170000Z" work-start="20220422T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
-      <constraint type="must-start-on" time="20220422T000000Z"/>
+    <task id="11" name="Impl&#xE9;mentation de la fonctionnalit&#xE9; d'ajout et de modification de contact" note="" work="57600" start="20220418T094640Z" end="20220419T094640Z" work-start="20220418T094640Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+      <predecessors>
+        <predecessor id="1" predecessor-id="4" type="FS"/>
+      </predecessors>
     </task>
-    <task id="8" name="Modification et travaux au niveau du front-end" note="" work="230400" start="20220421T000000Z" end="20220502T170000Z" work-start="20220421T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
-      <constraint type="start-no-earlier-than" time="20220421T000000Z"/>
+    <task id="12" name="Impl&#xE9;mentation de la fonctionnalit&#xE9; de MAJ de la liste de contacts &#xE0; partir du serveur" note="" work="57600" start="20220412T170000Z" end="20220413T170000Z" work-start="20220413T080000Z" percent-complete="25" priority="0" type="normal" scheduling="fixed-work">
+      <predecessors>
+        <predecessor id="1" predecessor-id="9" type="FS"/>
+      </predecessors>
     </task>
-    <task id="9" name="Mise en place du serveur d'application" note="" work="86400" start="20220429T000000Z" end="20220503T170000Z" work-start="20220429T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
-      <constraint type="must-start-on" time="20220429T000000Z"/>
+    <task id="13" name="Impl&#xE9;mentation de l'envoi des messages en attente par SMS" note="" work="115200" start="20220428T170000Z" end="20220502T170000Z" work-start="20220429T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+      <predecessors>
+        <predecessor id="1" predecessor-id="7" type="FS"/>
+      </predecessors>
     </task>
-    <task id="10" name="Deploiement" note="" work="86400" start="20220429T000000Z" end="20220503T170000Z" work-start="20220429T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
-      <constraint type="must-start-on" time="20220429T000000Z"/>
+    <task id="14" name="Impl&#xE9;mentation de l'envoi des messages en attente par Whatsapp" note="" work="115200" start="20220429T000000Z" end="20220504T170000Z" work-start="20220429T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+      <constraint type="start-no-earlier-than" time="20220429T000000Z"/>
     </task>
-    <task id="11" name="Cr&#xE9;ation de l'UI (Design)" note="" work="288000" start="20220427T000000Z" end="20220510T170000Z" work-start="20220427T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
-      <constraint type="must-start-on" time="20220427T000000Z"/>
+    <task id="15" name="Deploiement" note="" work="216000" duration="57600" start="20220502T000000Z" end="20220503T170000Z" work-start="20220502T080000Z" percent-complete="38" priority="0" type="normal" scheduling="fixed-duration">
+      <constraint type="start-no-earlier-than" time="20220502T000000Z"/>
     </task>
-    <task id="12" name="Impl&#xE9;mentation de la fonctionnalit&#xE9; d'ajout et de modification de contact" note="" work="144000" start="20220428T000000Z" end="20220502T120000Z" work-start="20220428T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
-      <constraint type="must-start-on" time="20220428T000000Z"/>
-    </task>
-    <task id="13" name="Impl&#xE9;mentation de la fonctionnalit&#xE9; de MAJ de la liste de contacts &#xE0; partir du serveur" note="" work="86400" start="20220506T000000Z" end="20220509T120000Z" work-start="20220506T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
-      <constraint type="must-start-on" time="20220506T000000Z"/>
-    </task>
-    <task id="14" name="Impl&#xE9;mentation de l'envoi des messages en attente par SMS" note="" work="172800" start="20220428T000000Z" end="20220502T170000Z" work-start="20220428T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
-      <constraint type="must-start-on" time="20220428T000000Z"/>
-    </task>
-    <task id="15" name="Impl&#xE9;mentation de l'envoi des messages en attente par Whatsapp" note="" work="172800" start="20220430T000000Z" end="20220504T170000Z" work-start="20220502T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
-      <constraint type="must-start-on" time="20220430T000000Z"/>
-    </task>
-    <task id="16" name="Tests" note="" work="259200" start="20220504T000000Z" end="20220510T120000Z" work-start="20220504T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
-      <constraint type="must-start-on" time="20220504T000000Z"/>
+    <task id="16" name="Tests" note="" work="28800" start="20220503T170000Z" end="20220504T120000Z" work-start="20220504T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+      <constraint type="start-no-earlier-than" time="20220503T000000Z"/>
+      <predecessors>
+        <predecessor id="1" predecessor-id="15" type="FS"/>
+      </predecessors>
     </task>
   </tasks>
   <resource-groups/>
@@ -69,32 +94,33 @@
     <resource id="2" name="yaasiin" short-name="" type="1" units="0" email="yaasiin.ayeva@ifnti.com" note="" std-rate="0"/>
   </resources>
   <allocations>
+    <allocation task-id="4" resource-id="1" units="50"/>
     <allocation task-id="16" resource-id="1" units="100"/>
-    <allocation task-id="15" resource-id="1" units="100"/>
-    <allocation task-id="14" resource-id="1" units="100"/>
     <allocation task-id="13" resource-id="1" units="100"/>
     <allocation task-id="12" resource-id="1" units="100"/>
-    <allocation task-id="11" resource-id="1" units="50"/>
-    <allocation task-id="10" resource-id="1" units="100"/>
-    <allocation task-id="9" resource-id="1" units="100"/>
+    <allocation task-id="11" resource-id="1" units="100"/>
+    <allocation task-id="10" resource-id="1" units="50"/>
+    <allocation task-id="15" resource-id="1" units="188"/>
+    <allocation task-id="9" resource-id="1" units="50"/>
     <allocation task-id="7" resource-id="1" units="50"/>
     <allocation task-id="6" resource-id="1" units="50"/>
     <allocation task-id="5" resource-id="1" units="40"/>
-    <allocation task-id="4" resource-id="1" units="60"/>
     <allocation task-id="2" resource-id="1" units="100"/>
-    <allocation task-id="1" resource-id="1" units="50"/>
+    <allocation task-id="1" resource-id="1" units="25"/>
+    <allocation task-id="9" resource-id="2" units="50"/>
+    <allocation task-id="15" resource-id="2" units="188"/>
     <allocation task-id="16" resource-id="2" units="100"/>
-    <allocation task-id="15" resource-id="2" units="100"/>
     <allocation task-id="14" resource-id="2" units="100"/>
     <allocation task-id="13" resource-id="2" units="100"/>
     <allocation task-id="12" resource-id="2" units="100"/>
-    <allocation task-id="11" resource-id="2" units="50"/>
+    <allocation task-id="11" resource-id="2" units="100"/>
+    <allocation task-id="10" resource-id="2" units="50"/>
     <allocation task-id="8" resource-id="2" units="100"/>
     <allocation task-id="7" resource-id="2" units="50"/>
     <allocation task-id="6" resource-id="2" units="50"/>
     <allocation task-id="5" resource-id="2" units="60"/>
     <allocation task-id="4" resource-id="2" units="40"/>
     <allocation task-id="3" resource-id="2" units="100"/>
-    <allocation task-id="1" resource-id="2" units="50"/>
+    <allocation task-id="1" resource-id="2" units="25"/>
   </allocations>
 </project>
