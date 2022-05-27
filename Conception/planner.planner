@@ -52,6 +52,7 @@
         <predecessor id="1" predecessor-id="6" type="FS"/>
       </predecessors>
     </task>
+
     <task id="8" name="Modification et travaux au niveau du front-end" note="" work="57600" start="20220411T000000Z" end="20220412T170000Z" work-start="20220411T080000Z" percent-complete="80" priority="0" type="normal" scheduling="fixed-work"/>
     <task id="9" name="Mise en place du serveur d'application" note="" work="57600" start="20220411T000000Z" end="20220412T170000Z" work-start="20220411T080000Z" percent-complete="100" priority="0" type="normal" scheduling="fixed-work"/>
     <task id="10" name="Cr&#xE9;ation de l'UI (Design)" note="" work="86400" start="20220412T170000Z" end="20220415T170000Z" work-start="20220413T080000Z" percent-complete="90" priority="0" type="normal" scheduling="fixed-work">
@@ -70,6 +71,7 @@
         <predecessor id="1" predecessor-id="9" type="FS"/>
       </predecessors>
     </task>
+
     <task id="13" name="import du fichier CSV contenant les contacts" note="Termin&#xE9;&#10;mer. 25 mai 2022, 09:05&#10;" work="28800" start="20220419T094640Z" end="20220420T094640Z" work-start="20220419T094640Z" percent-complete="100" priority="0" type="normal" scheduling="fixed-work">
       <predecessors>
         <predecessor id="1" predecessor-id="12" type="FS"/>
@@ -95,15 +97,20 @@
     <task id="17" name="Impl&#xE9;mentation de l'envoi des messages en attente par Whatsapp" note="" work="115200" start="20220429T000000Z" end="20220504T170000Z" work-start="20220429T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
       <constraint type="start-no-earlier-than" time="20220429T000000Z"/>
     </task>
+
     <task id="18" name="Deploiement" note="" work="216000" duration="57600" start="20220502T000000Z" end="20220503T170000Z" work-start="20220502T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-duration">
       <constraint type="start-no-earlier-than" time="20220502T000000Z"/>
     </task>
     <task id="19" name="Tests" note="" work="28800" start="20220503T170000Z" end="20220504T120000Z" work-start="20220504T080000Z" percent-complete="70" priority="0" type="normal" scheduling="fixed-work">
+
       <constraint type="start-no-earlier-than" time="20220503T000000Z"/>
       <predecessors>
         <predecessor id="1" predecessor-id="18" type="FS"/>
       </predecessors>
     </task>
+    <task id="17" name="Authentification via Yield-App" note="" work="36000" start="20220411T000000Z" end="20220413T120000Z" work-start="20220411T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
+    <task id="18" name="Creation de layout" note="" work="7200" start="20220411T000000Z" end="20220411T120000Z" work-start="20220411T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
+    <task id="19" name="Manipulation des requ&#xEA;tes Post et Get pour s'authentifier" note="" work="28800" start="20220411T000000Z" end="20220412T170000Z" work-start="20220411T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
   </tasks>
   <resource-groups/>
   <resources>
@@ -126,6 +133,9 @@
     <allocation task-id="5" resource-id="1" units="40"/>
     <allocation task-id="2" resource-id="1" units="100"/>
     <allocation task-id="1" resource-id="1" units="25"/>
+    <allocation task-id="17" resource-id="2" units="50"/>
+    <allocation task-id="19" resource-id="2" units="50"/>
+    <allocation task-id="18" resource-id="2" units="50"/>
     <allocation task-id="9" resource-id="2" units="50"/>
     <allocation task-id="18" resource-id="2" units="188"/>
     <allocation task-id="19" resource-id="2" units="100"/>
