@@ -92,17 +92,21 @@
         <predecessor id="1" predecessor-id="7" type="FS"/>
       </predecessors>
     </task>
-    <task id="17" name="Impl&#xE9;mentation de l'envoi des messages en attente par Whatsapp" note="" work="115200" start="20220429T000000Z" end="20220504T170000Z" work-start="20220429T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+    <task id="17" name="Impl&#xE9;mentation de l'envoi des messages en attente par Whatsapp" note="" work="432000" start="20220429T000000Z" end="20220811T170000Z" work-start="20220429T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
       <constraint type="start-no-earlier-than" time="20220429T000000Z"/>
     </task>
-    <task id="18" name="Deploiement" note="" work="216000" duration="57600" start="20220502T000000Z" end="20220503T170000Z" work-start="20220502T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-duration">
+    <task id="18" name="Authentification via Yield-App" note="" work="10800" start="20220411T000000Z" end="20220411T103000Z" work-start="20220411T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
+    <task id="19" name="Creation de layout" note="" work="7200" start="20220411T000000Z" end="20220411T082640Z" work-start="20220411T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
+    <task id="20" name="Manipulation des requ&#xEA;tes Post et Get pour s'authentifier" note="" work="28800" start="20220411T082640Z" end="20220411T113820Z" work-start="20220411T082640Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+      <predecessors>
+        <predecessor id="1" predecessor-id="19" type="FS"/>
+      </predecessors>
+    </task>
+    <task id="21" name="Deploiement" note="" work="27000" start="20220502T000000Z" end="20220506T143000Z" work-start="20220502T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
       <constraint type="start-no-earlier-than" time="20220502T000000Z"/>
     </task>
-    <task id="19" name="Tests" note="" work="28800" start="20220503T170000Z" end="20220504T120000Z" work-start="20220504T080000Z" percent-complete="70" priority="0" type="normal" scheduling="fixed-work">
+    <task id="22" name="Tests" note="" work="25200" start="20220503T000000Z" end="20220505T093000Z" work-start="20220503T080000Z" percent-complete="70" priority="0" type="normal" scheduling="fixed-work">
       <constraint type="start-no-earlier-than" time="20220503T000000Z"/>
-      <predecessors>
-        <predecessor id="1" predecessor-id="18" type="FS"/>
-      </predecessors>
     </task>
   </tasks>
   <resource-groups/>
@@ -111,25 +115,32 @@
     <resource id="2" name="yaasiin" short-name="" type="1" units="0" email="yaasiin.ayeva@ifnti.com" note="" std-rate="0"/>
   </resources>
   <allocations>
+    <allocation task-id="22" resource-id="1" units="20"/>
+    <allocation task-id="21" resource-id="1" units="20"/>
     <allocation task-id="15" resource-id="1" units="100"/>
     <allocation task-id="13" resource-id="1" units="100"/>
     <allocation task-id="4" resource-id="1" units="50"/>
-    <allocation task-id="19" resource-id="1" units="100"/>
+    <allocation task-id="20" resource-id="1" units="100"/>
     <allocation task-id="16" resource-id="1" units="100"/>
     <allocation task-id="12" resource-id="1" units="100"/>
     <allocation task-id="11" resource-id="1" units="100"/>
     <allocation task-id="10" resource-id="1" units="50"/>
-    <allocation task-id="18" resource-id="1" units="188"/>
+    <allocation task-id="19" resource-id="1" units="188"/>
     <allocation task-id="9" resource-id="1" units="50"/>
     <allocation task-id="7" resource-id="1" units="50"/>
     <allocation task-id="6" resource-id="1" units="50"/>
     <allocation task-id="5" resource-id="1" units="40"/>
     <allocation task-id="2" resource-id="1" units="100"/>
     <allocation task-id="1" resource-id="1" units="25"/>
+    <allocation task-id="22" resource-id="2" units="20"/>
+    <allocation task-id="17" resource-id="2" units="20"/>
+    <allocation task-id="18" resource-id="2" units="20"/>
+    <allocation task-id="20" resource-id="2" units="50"/>
+    <allocation task-id="19" resource-id="2" units="50"/>
     <allocation task-id="9" resource-id="2" units="50"/>
-    <allocation task-id="18" resource-id="2" units="188"/>
-    <allocation task-id="19" resource-id="2" units="100"/>
-    <allocation task-id="17" resource-id="2" units="100"/>
+    <allocation task-id="19" resource-id="2" units="188"/>
+    <allocation task-id="20" resource-id="2" units="100"/>
+    <allocation task-id="18" resource-id="2" units="100"/>
     <allocation task-id="16" resource-id="2" units="100"/>
     <allocation task-id="12" resource-id="2" units="100"/>
     <allocation task-id="11" resource-id="2" units="100"/>
