@@ -1,0 +1,17 @@
+{% extends "foundation/base.html" %}
+ {% block base_body %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>AJOUTER CSV</title>
+    </head>
+    <body>
+        <form method="post" enctype="multipart/form-data">{% csrf_token %}
+            {{formCsv}}
+        <input type="submit" name="ENVOYER">
+        </form>
+    </body>
+</html>
+ {% endblock base_body %}

@@ -1,0 +1,41 @@
+25 mai
+import de csv ça marche
+il y a eu un envoi le 20
+dans le csv il y avait 1477 à envoyer
+dans les instances de envoi sur l'appli web on a 881 
+et 869 ont été envoyés
+pourquoi pas tous d'import dans le csv
+
+taf
+les notifications concernant l'envoi depuis le téléphone vers le web
+partie whatsapp à terminer
+
+déploier
+
+
+mettre à jour le git
+
+Mercredi 25 Mai 2022
+Rapport d'avancement du projet Yield
+
+Sont attendus : JEAN Christophe Carré, AYEVA Yaasiin, IDRISSOU Djabir
+Sont présents : JEAN Christophe Carré, AYEVA Yaasiin, IDRISSOU Djabir
+
+État du travail technique: À ce jour, sont implémentés et fonctionnent : 
+- L'import du csv contenant la liste des contacts
+- La création des contacts à partir du csv fourni
+- La création des instances d'envoi en fonction des contacts créés
+- L'envoi de requête depuis l'application mobile pour récupérer la liste des envois
+- Envoi des sms avec le téléphone aux contacts récupérés
+
+Résultat des tests:
+Il y a eu un envoi le 20 Mai de l'année en cours, dans le fichier CSV il y avait 1477 personnes
+1785 personnes ont été créés dont 883 élèves. 
+Exactement 863 instances d'envois ont été générés et 851 ont été envoyés. 
+
+TAF:
+- Ajouter une touche de sécurité côté application relié au login du web
+- Renvoyer les statuts depuis l'application mobile concernant les envois pour une mise à jour côté web
+- Terminer la partie whatsapp
+- Mettre à jour le GIT
+- Déploier
